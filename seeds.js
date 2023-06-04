@@ -1,8 +1,7 @@
 const Project = require("./models/project");
 const mongoose = require("mongoose");
 
-const connectString =
-  "mongodb+srv://khan_project_user:wPh9yHnKvuIJ6H5o@khanprojectdb.ns222vg.mongodb.net/khanprojectdb?retryWrites=true&w=majority";
+const connectString = process.env.MONGO_ADDRESS;
 
 mongoose
   .connect(connectString, {
